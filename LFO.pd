@@ -1,0 +1,36 @@
+#N canvas 34 126 938 776 10;
+#X obj 330 -470 vsl 15 128 0.2 20 1 0 bang empty Freq 0 -9 0 10 -183085
+-1 -1 0 1;
+#X obj 370 -470 vsl 15 128 0.01 1 1 1 empty empty Depth 0 -9 0 10 -183085
+-1 -1 0 1;
+#X obj 333 -169 clip -1 1;
+#X obj 453 -469 vsl 15 128 -1 1 0 0 empty empty LFO 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 332 -279 snapshot~;
+#X obj 332 -317 osc~ 2;
+#X obj 188 -414 loadbang;
+#X obj 190 -370 metro 10;
+#X obj 332 -235 * 1, f 8;
+#X obj 409 -470 vsl 15 128 -1 1 0 1 empty empty Center 0 -9 0 10 -183085
+-1 -1 3550 1;
+#X obj 331 -202 + 1;
+#X obj 315 -508 inlet;
+#X obj 361 -508 inlet;
+#X obj 403 -508 inlet;
+#X obj 453 -319 outlet;
+#X text 430 -170 Output Values go from -1 to 1;
+#X connect 0 0 5 0;
+#X connect 1 0 8 1;
+#X connect 2 0 3 0;
+#X connect 3 0 14 0;
+#X connect 4 0 8 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 2 0;
+#X connect 11 0 0 0;
+#X connect 12 0 1 0;
+#X connect 13 0 9 0;
+#X coords 0 -1 1 1 160 160 2 321 -487;

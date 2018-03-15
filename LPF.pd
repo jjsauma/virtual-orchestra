@@ -1,0 +1,16 @@
+#N canvas 586 482 747 519 10;
+#X text 189 105 Cutoff Freq;
+#X obj 101 155 lop~;
+#X obj 101 216 outlet~;
+#X obj 178 62 inlet~;
+#X obj 189 121 hsl 128 15 20 20000 0 1 empty empty empty -2 -8 0 10
+-262144 -1 -1 7700 0;
+#X text 179 80 Incoming Audio;
+#X obj 304 62 inlet;
+#X text 308 80 Freq;
+#X text 207 179 Frequency goes from 20 to 200000;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 6 0 1 1;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 160 60 2 178 80;
